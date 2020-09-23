@@ -1,6 +1,6 @@
 
 public class Problem1to10 {
-    ;
+
     /*
     Problem 1
     If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
@@ -67,8 +67,8 @@ public class Problem1to10 {
     Find the largest palindrome made from the product of two 3-digit numbers.
      */
     static void problem4(){
-        for(int i = 10; i < 100; i++){
-                for(int j = 10; j < 100; j++){
+        for(int i = 100; i < 1000; i++){
+                for(int j = 100; j < 1000; j++){
                     checkPoli(i * j) ;
                 }
             }
@@ -76,7 +76,33 @@ public class Problem1to10 {
 
     static void checkPoli(int polindrome) {
         int length = (int)(Math.log10(polindrome)+1);
-        System.out.println(length);
+        char[] arr = String.valueOf(polindrome).toCharArray();
 
+        for(int i = 0; i < arr.length / 2; i++){
+
+            if( arr[i] != arr[length - i - 1] )
+                return;
+
+        }
+        System.out.println(polindrome);
+    }
+
+
+    /*
+    На ней абзац текста на английском языке. Нужно скопировать этот текст в новый абзац, слова начинающиеся с “r”,
+    без учета регистра, выделить красным и переставить буквы в обратном порядке.
+     */
+    static void rWordsReverse(){
+        String paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        String[] words = paragraph.split("\\s+");
+        String tmp;
+
+        for (String word: words) {
+            if(word.charAt(0) == 'i'){
+
+                StringBuilder str = new StringBuilder(word);
+                System.out.println(str.reverse());
+            }
+        }
     }
 }

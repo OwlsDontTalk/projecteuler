@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="529037e9-0408-4320-ade1-27455e300f31" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -26,15 +29,16 @@
   <component name="ProjectId" id="1hQZi0NBjoAAvTI7ksFznlSodUW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -48,12 +52,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.SolutionExecutor" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -66,32 +82,37 @@
       <updated>1599945399046</updated>
       <workItem from="1599945401805" duration="5954000" />
       <workItem from="1600143997587" duration="6603000" />
+      <workItem from="1600869659264" duration="3391000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599945486032">
       <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state x="446" y="195" key="#com.intellij.execution.impl.EditConfigurationsDialog/64.0.1856.1080@64.0.1856.1080" timestamp="1599945486032" />
-    <state width="906" height="295" key="GridCell.Tab.0.bottom" timestamp="1600606977179">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state width="1878" height="337" key="GridCell.Tab.0.bottom" timestamp="1600873366677">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1878" height="337" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1600873366677" />
     <state width="906" height="295" key="GridCell.Tab.0.bottom/64.0.1856.1080@64.0.1856.1080" timestamp="1600606977179" />
-    <state width="906" height="295" key="GridCell.Tab.0.center" timestamp="1600606977179">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state width="1878" height="337" key="GridCell.Tab.0.center" timestamp="1600873366676">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1878" height="337" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1600873366676" />
     <state width="906" height="295" key="GridCell.Tab.0.center/64.0.1856.1080@64.0.1856.1080" timestamp="1600606977179" />
-    <state width="906" height="295" key="GridCell.Tab.0.left" timestamp="1600606977179">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state width="1878" height="337" key="GridCell.Tab.0.left" timestamp="1600873366675">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1878" height="337" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1600873366675" />
     <state width="906" height="295" key="GridCell.Tab.0.left/64.0.1856.1080@64.0.1856.1080" timestamp="1600606977179" />
-    <state width="906" height="295" key="GridCell.Tab.0.right" timestamp="1600606977179">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state width="1878" height="337" key="GridCell.Tab.0.right" timestamp="1600873366676">
+      <screen x="0" y="0" width="1920" height="1200" />
     </state>
+    <state width="1878" height="337" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1600873366676" />
     <state width="906" height="295" key="GridCell.Tab.0.right/64.0.1856.1080@64.0.1856.1080" timestamp="1600606977179" />
     <state width="1813" height="364" key="GridCell.Tab.1.bottom" timestamp="1599986991502">
       <screen x="64" y="0" width="1856" height="1080" />
@@ -117,5 +138,9 @@
       <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state x="688" y="364" key="com.intellij.ide.util.TipDialog/64.0.1856.1080@64.0.1856.1080" timestamp="1600144011043" />
+    <state x="625" y="271" width="670" height="676" key="search.everywhere.popup" timestamp="1600873120084">
+      <screen x="0" y="0" width="1920" height="1200" />
+    </state>
+    <state x="625" y="271" width="670" height="676" key="search.everywhere.popup/1920.0.1920.1080/0.0.1920.1200@0.0.1920.1200" timestamp="1600873120084" />
   </component>
 </project>
