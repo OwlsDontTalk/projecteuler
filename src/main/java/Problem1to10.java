@@ -89,6 +89,28 @@ public class Problem1to10 {
 
 
     /*
+    2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+    What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+     */
+    static void problem5(int deviders){
+        boolean numberFound ;
+        int number = deviders;
+
+        do{
+            number++;
+            numberFound = true;
+            for(int i = 1; i <= deviders; i++){
+                if(number % i != 0){
+                    numberFound = false;
+                }
+            }
+        }while(!numberFound);
+
+        System.out.println(number);
+    }
+
+
+    /*
     На ней абзац текста на английском языке. Нужно скопировать этот текст в новый абзац, слова начинающиеся с “r”,
     без учета регистра, выделить красным и переставить буквы в обратном порядке.
      */
