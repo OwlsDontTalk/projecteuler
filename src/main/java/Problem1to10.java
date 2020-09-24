@@ -1,3 +1,4 @@
+import java.util.*;
 
 public class Problem1to10 {
 
@@ -43,12 +44,13 @@ public class Problem1to10 {
 
 
     /*
+    Problem 3
     Integer factorization
     The prime factors of 13195 are 5, 7, 13 and 29.
     What is the largest prime factor of the number 600851475143 ?
      */
 
-    static void problem3(long number){
+    static void largestPrimeFactor(long number){
 
         int i = 2;
 
@@ -60,6 +62,25 @@ public class Problem1to10 {
             }
         }
         System.out.println(number);
+    }
+
+    static List<Integer> allPrimeFactors(int number){
+        // System.out.println("Calculating all prime factors for: " + number);
+        int i = 2;
+        List<Integer> arr = new ArrayList<Integer>();
+
+        while(number != i){
+            if(number % i != 0){
+                i++;
+            } else {
+                number = number / i;
+                arr.add(i);
+            }
+        }
+        arr.add(i);
+
+        // printArrayList(arr);
+        return arr;
     }
 
     /*
@@ -89,10 +110,13 @@ public class Problem1to10 {
 
 
     /*
+    Problem5
     2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
     What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
      */
     static void problem5(int deviders){
+        long start = System.currentTimeMillis();
+
         boolean numberFound ;
         int number = deviders;
 
@@ -107,8 +131,50 @@ public class Problem1to10 {
         }while(!numberFound);
 
         System.out.println(number);
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.println(elapsedTime);
     }
 
+
+    static void problem5v2(int deviders){
+        long start = System.currentTimeMillis();
+        List<Integer> allDevidersPrime = new ArrayList<Integer>();
+        List<Integer> tmpDeviders;
+        int result = 1;
+
+        for(int i = 2 ; i <= deviders; i++){
+            tmpDeviders = allPrimeFactors(i);
+            combineDeviders(tmpDeviders, allDevidersPrime);
+        }
+
+        for (Integer digit: allDevidersPrime) {
+            result *= digit;
+        }
+
+        System.out.println("Smallest positive number: " + result);
+        long end = System.currentTimeMillis();
+        long elapsedTime = end - start;
+        System.out.println("time: " + elapsedTime);
+
+    }
+
+    static void combineDeviders(List<Integer> tmp, List<Integer> all){
+        for(int i = 0; i < all.size(); i++){
+            for(int j = 0; j < tmp.size(); j++){
+                if(all.get(i) == tmp.get(j))
+                        tmp.remove(j);
+                        break;
+            }
+        }
+        all.addAll(tmp);
+    }
+
+    static void printArrayList(List<Integer> arr){
+        for (Integer i : arr) {
+            System.out.print(i);
+        }
+    }
 
     /*
     На ней абзац текста на английском языке. Нужно скопировать этот текст в новый абзац, слова начинающиеся с “r”,
