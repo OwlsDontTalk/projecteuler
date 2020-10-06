@@ -10,6 +10,6 @@ public class SolutionExecutor {
         //Problem1to10.problem6();
         //Problem1to10.largestPrimeFactor(14l);
         //Problem1to10.findNprimeNumber(10001);
-        Problem1to10.adjacentDigitsMultiply(4);
+        Problem1to10.adjacentDigitsMultiply(13);
     }
 }
