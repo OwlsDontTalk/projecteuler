@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.sql.SQLOutput;
 import java.util.*;
 
@@ -237,13 +239,16 @@ public class Problem1to10 {
             for (int j = 0; j < number; j++) {
                 tmpArr[j] = intArr[i + j];
             }
-            System.out.println("\nelement " + i + " tmp arr");
+
             for (int tmpInt : tmpArr) {
-                tmpProduct *= (int)tmpInt;
-                System.out.print(tmpInt + " ");
+                tmpProduct *= tmpInt;
             }
-            System.out.print( " product: " + tmpProduct);
+
+            if(tmpProduct > maxProduct) maxProduct = tmpProduct;
+
         }
+
+        System.out.println(maxProduct);
     }
 }
 
