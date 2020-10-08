@@ -65,7 +65,10 @@ public class Problem1to10 {
                 number = number / i;
             }
         }
+
+        System.out.println(number);
         return (int)number;
+
     }
 
     static List<Integer> allPrimeFactors(int number){
@@ -250,5 +253,47 @@ public class Problem1to10 {
 
         System.out.println(maxProduct);
     }
+
+
+    static void problem9(){
+        for(int i = 1; i < 1000; i++){
+            for (int j = 1; j < 1000; j++) {
+                for (int k = 1; k < 1000; k++) {
+                    if( ((i*i) + (j*j)) == k*k){
+                        if((i+j+k) == 1000 ){
+                            System.out.println(i * j * k);
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    static void findAllPrimesBelow(long number){
+        long sum = 0;
+
+        for(int i = 1; i < number; i++){
+            System.out.println(i + " " + sum);
+            if(isNumberPrime(i))
+                sum += i;
+        }
+        System.out.println(sum);
+    }
+
+    static boolean isNumberPrime(int n){
+        //System.out.println("i = " + n +" check initiated");
+        // Corner case
+        if (n <= 1) return false;
+
+        // Check from 2 to n-1
+        for (int i = 2; i < n; i++)
+            if (n % i == 0)
+                return false;
+
+        return true;
+    }
+
 }
 
