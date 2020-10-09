@@ -1,6 +1,8 @@
 import org.w3c.dom.ls.LSOutput;
 
+import java.math.BigInteger;
 import java.sql.SQLOutput;
+import java.text.DecimalFormat;
 import java.util.*;
 
 public class Problem1to10 {
@@ -295,6 +297,9 @@ public class Problem1to10 {
         return true;
     }
 
+
+    //Problem 11
+    //To-Do list: find soultion whatever it costs
     static void findMaxDirection(){
         int[][] arr = new int[20][20];
 
@@ -321,14 +326,98 @@ public class Problem1to10 {
 
 
 
-        for(int i = 0; i < 20; i++){
-            System.out.println("");
-            for (int j = 0; j < 20; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-        }
+//        for(int i = 0; i < 20; i++){
+//            System.out.println("");
+//            for (int j = 0; j < 20; j++) {
+//                System.out.print(arr[i][j] + " ");
+//            }
+//        }
+
+        findMaxDirectionRow(arr);
+        findMaxDirectionColumns(arr);
+        findMaxDirectionDiagonally(arr);
     }
 
-    findMaxDirectionRow()
+    static void findMaxDirectionRow(int[][] arr){
+        int maxTmp = 1;
+        int max = 1;
+
+        for (int i = 0; i < 20; i++) {
+            maxTmp = 1;
+
+            for (int j = 0; j <=16; j++) {
+                maxTmp = arr[i][j] * arr[i][j+1] * arr[i][j+2] * arr[i][j+3];
+                if (max < maxTmp)
+                    max = maxTmp;
+            }
+        }
+        System.out.println(max);
+
+    }
+
+    static void findMaxDirectionColumns(int[][] arr){
+        int maxTmp = 1;
+        int max = 1;
+
+        for (int i = 0; i < 20; i++) {
+            maxTmp = 1;
+
+            for (int j = 0; j <= 16; j++) {
+                maxTmp = arr[j][i] * arr[j+1][i] * arr[j+2][i] * arr[j+3][i];
+                if (max < maxTmp)
+                    max = maxTmp;
+            }
+        }
+        System.out.println(max);
+
+    }
+
+    static void findMaxDirectionDiagonally(int[][] arr){
+        int maxTmp = 1;
+        int max = 1;
+
+        for (int i = 0; i <= 16; i++) {
+            maxTmp = 1;
+
+            for (int j = 0; j <= 16; j++) {
+                maxTmp = arr[j][i] * arr[j+1][i+1] * arr[j+2][i+2] * arr[j+3][i+3];
+                if (max < maxTmp)
+                    max = maxTmp;
+            }
+        }
+        System.out.println(max);
+
+    }
+    //------------------------------------------------------------
+
+
+    //Problem 12
+
+
+    //Problem 16
+
+    //Problem 20
+    static void factorialNumberDigitsSum(){
+        int number = 100;
+        int sum = 0;
+        BigInteger factorial = BigInteger.valueOf(1);
+
+
+        for(int i = number; i > 1; i--){
+            factorial = factorial.multiply(BigInteger.valueOf(i));
+        }
+
+        String factorialString = factorial.toString();
+        char[] factorialChar =  factorialString.toCharArray();
+
+        for (int i = 0; i < factorialChar.length; i++) {
+            sum += Character.getNumericValue(factorialChar[i]);
+        }
+
+        System.out.println(factorial);
+        System.out.println(sum);
+    }
+
+
 }
 

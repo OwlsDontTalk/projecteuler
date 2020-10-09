@@ -12,6 +12,7 @@ public class SolutionExecutor {
        // Problem1to10.findNprimeNumber(10001);
         //Problem1to10.adjacentDigitsMultiply(13);
         //Problem1to10.findAllPrimesBelow(2000000);
-        Problem1to10.findMaxDirection();
+
+        Problem1to10.factorialNumberDigitsSum();
     }
 }
