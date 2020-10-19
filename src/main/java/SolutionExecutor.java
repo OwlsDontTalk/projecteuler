@@ -1,5 +1,7 @@
+import java.io.IOException;
+
 public class SolutionExecutor {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //Problem1to10.problem1();
         //Problem1to10.problem2();
         //Problem1to10.allPrimeFactors(13195);
@@ -13,6 +15,6 @@ public class SolutionExecutor {
         //Problem1to10.adjacentDigitsMultiply(13);
         //Problem1to10.findAllPrimesBelow(2000000);
 
-        Problem1to10.factorialNumberDigitsSum();
+        Problem1to10.sumOf1500DigitsNumber();
     }
 }

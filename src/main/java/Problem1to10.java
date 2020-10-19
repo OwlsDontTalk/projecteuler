@@ -1,8 +1,7 @@
-import org.w3c.dom.ls.LSOutput;
-
+import java.io.IOException;
 import java.math.BigInteger;
-import java.sql.SQLOutput;
-import java.text.DecimalFormat;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class Problem1to10 {
@@ -418,6 +417,51 @@ public class Problem1to10 {
         System.out.println(sum);
     }
 
+     //problem 22
+    /*
+    Using names.txt (right click and 'Save Link/Target As...'), a 46K text file containing over five-thousand first
+    names, begin by sorting it into alphabetical order. Then working out the alphabetical value for each name,
+    multiply this value by its alphabetical position in the list to obtain a name score.
+    For example, when the list is sorted into alphabetical order, COLIN, which is worth 3 + 15 + 12 + 9 + 14 = 53, is the 938th name in the list.
+    So, COLIN would obtain a score of 938 × 53 = 49714.
+    What is the total of all the name scores in the file?
+     */
 
+    static void problem22() throws IOException {
+        List<String> line = Files.readAllLines(Paths.get("src/p022_names.txt"));
+
+        if(line == null || line.isEmpty()) return;
+        int total = 0;
+
+
+        String[] words =  line.get(0).split(",");
+        int[][] rate = new int[words.length][2];
+        Arrays.sort(words);
+
+        for (int i = 0; i < words.length; i++) {
+            total += ((i+1) * rateWordAlhabetically(words[i]));
+            System.out.println( (i + 1) + " " + words[i] );
+            System.out.println("------");
+        }
+
+        System.out.println(total);
+    }
+
+    //return calculated sum of word's letters, based on alphabet position of each letter
+    static int rateWordAlhabetically(String w){
+        char[] alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+        int sumRate = 0;
+
+        for (int i = 0; i < w.length(); i++) {
+            for (int j = 0; j < alphabet.length; j++) {
+                if(w.charAt(i) == alphabet[j]) {
+                    sumRate = sumRate + j + 1;
+                    continue;
+                }
+            }
+        }
+
+        return sumRate;
+    }
 }
 
